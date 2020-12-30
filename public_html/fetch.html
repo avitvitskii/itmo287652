@@ -12,7 +12,8 @@
         let value = document.getElementById("inp").value;
         let response = await fetch(value);
         if (response.ok) {
-            document.getElementById("inp").value = await response.text();
+            let text = await response.text();
+            document.getElementById("inp").value = text;
         }
     }
 </script>
